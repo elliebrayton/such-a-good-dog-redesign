@@ -1,0 +1,240 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 539px,
+  md: 728px,
+  lg: 1021px,
+  xl: 1300px,
+) !default;
+
+$container-max-widths: (
+  lg: 1230px,
+  xl: 1300px,
+) !default;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media (min-width: 25.75em) {
+      @content;
+    } //412
+  }
+
+  @if $breakpoint == sm-phone {
+    @media (min-width: 33.68em) {
+      @content;
+    } //539
+  }
+
+  @if $breakpoint == tab-port {
+    @media (min-width: 45.5em) {
+      @content;
+    } //728px
+  }
+
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.25em) {
+      @content;
+    } //900px
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 63.81em) {
+      @content;
+    } //1021px
+  }
+
+  @if $breakpoint == lg-desktop {
+    @media (min-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == xl-desktop {
+    @media (min-width: 87.5em) {
+      @content;
+    } //1300px
+  }
+}
+
+:root {
+  --light-green: #9dc41c;
+  --dark-green: #22964a;
+  --light-blue: #088fd5;
+  --medium-blue: #0f75aa;
+  --dark-blue: #214b65;
+
+  --dark-grey: #6c746f;
+  --light-grey: #f0f0f0;
+
+  --font-family: proxima-nova, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include responsive(sm-phone) {
+    font-size: 56.25%;
+  }
+  @include responsive(tab-land) {
+    font-size: 62.5%;
+  }
+  @include responsive(lg-desktop) {
+    font-size: 68.75%;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.header {
+  background: white;
+}
+
+.logo {
+  width: 300px;
+}
+
+.bg-accent {
+  background: var(--light-grey);
+  padding: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.featured-container {
+  .featured-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 120px;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    .icon-img {
+      align-self: start;
+      display: block;
+      margin: 0 auto;
+      width: 60px;
+    }
+    p {
+      align-self: baseline;
+    }
+  }
+}
+
+.accredition-img {
+  height: 300px;
+}
+
+.alert {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  background: var(--medium-blue);
+  color: var(--light-grey);
+  padding: 1.5rem;
+  .alert-text {
+    display: inline-block;
+    @include responsive(sm-phone) {
+      width: 90%;
+    }
+    @include responsive(tab-land) {
+      width: 100%;
+    }
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+  }
+}
+
+.section {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.jumbotron {
+  background: var(--light-blue);
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
+  border-radius: 5px;
+  @include responsive(tab-port) {
+    width: 100%;
+  }
+}
+
+.jumbotron-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  margin-bottom: -60px;
+
+  @include responsive(tab-port) {
+    max-width: 100%;
+    margin-bottom: -35px;
+  }
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--light-green);
+  text-decoration: none;
+  width: 20rem;
+  padding: 1rem 0 0.5rem;
+  border-bottom: var(--dark-green) 6px solid;
+  border-radius: 3px;
+  transition: 0.2s;
+  &:link,
+  &:visited {
+    font-family: var(--font-family);
+    color: white;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
+    }
+    &:active {
+      transform: scale(1.02) translateY(1px);
+    }
+  }
+}
+
+.h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  @include responsive(xs-phone) {
+    font-size: 3rem;
+  }
+  @include responsive(lg-desktop) {
+    font-size: 3.5rem;
+  }
+}
+
+.h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  @include responsive(tab-land) {
+    font-size: 2.8rem;
+  }
+}
+
+@import '../bootstrap-4-grid/scss/grid.scss';
