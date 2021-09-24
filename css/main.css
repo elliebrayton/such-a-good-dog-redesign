@@ -34,8 +34,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 1021px) {
@@ -47,8 +47,8 @@ html {
 
 .container-fluid, .container-lg, .container-xl {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
   margin-right: auto;
   margin-left: auto; }
 
@@ -63,8 +63,8 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -2.5rem;
+  margin-left: -2.5rem; }
 
 .no-gutters {
   margin-right: 0;
@@ -82,8 +82,8 @@ html {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 2.5rem;
+  padding-left: 2.5rem; }
 
 .col {
   flex-basis: 0;
@@ -2936,7 +2936,7 @@ body {
   --light-blue: #088fd5;
   --medium-blue: #0f75aa;
   --dark-blue: #214b65;
-  --dark-grey: #6c746f;
+  --dark-grey: #606863;
   --light-grey: #f0f0f0;
   --font-family: proxima-nova, sans-serif; }
 
@@ -2962,7 +2962,8 @@ html {
 body {
   font-family: var(--font-family);
   font-size: 1.8rem;
-  font-weight: 400; }
+  font-weight: 400;
+  color: var(--dark-grey); }
 
 P {
   padding-bottom: 2rem; }
@@ -2977,12 +2978,7 @@ img {
   max-width: 100%; }
 
 figure {
-  width: 75%;
   margin: 0 auto; }
-
-.full-width {
-  display: block;
-  width: 100% !important; }
 
 .featured-container {
   padding: 2rem 0;
@@ -3077,7 +3073,8 @@ figure {
 .h1 {
   font-size: 2.4rem;
   font-weight: 600;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  color: var(--medium-blue); }
   @media (min-width: 25.75em) {
     .h1 {
       font-size: 3rem; } }
@@ -3088,10 +3085,16 @@ figure {
 .h2 {
   font-size: 2.4rem;
   font-weight: 600;
-  color: var(--dark-blue); }
+  color: var(--dark-blue);
+  padding-bottom: 2rem; }
   @media (min-width: 56.25em) {
     .h2 {
       font-size: 2.8rem; } }
+
+.h3 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--medium-blue); }
 
 .h4 {
   font-size: 2rem;

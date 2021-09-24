@@ -11,6 +11,8 @@ $container-max-widths: (
   xl: 1300px,
 ) !default;
 
+$grid-gutter-width: 5rem !default;
+
 @import '../bootstrap-4-grid/scss/grid.scss';
 @import 'abstracts/mixins';
 @import 'base/typography';
@@ -28,7 +30,7 @@ $container-max-widths: (
   --medium-blue: #0f75aa;
   --dark-blue: #214b65;
 
-  --dark-grey: #6c746f;
+  --dark-grey: #606863;
   --light-grey: #f0f0f0;
 
   --font-family: proxima-nova, sans-serif;
@@ -59,6 +61,7 @@ body {
   font-family: var(--font-family);
   font-size: 1.8rem;
   font-weight: 400;
+  color: var(--dark-grey);
 }
 
 P {
@@ -78,13 +81,7 @@ img {
 }
 
 figure {
-  width: 75%;
   margin: 0 auto;
-}
-
-.full-width {
-  display: block;
-  width: 100% !important;
 }
 
 .featured-container {
@@ -194,6 +191,7 @@ figure {
   font-size: 2.4rem;
   font-weight: 600;
   padding-bottom: 1rem;
+  color: var(--medium-blue);
   @include responsive(xs-phone) {
     font-size: 3rem;
   }
@@ -206,9 +204,15 @@ figure {
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--dark-blue);
+  padding-bottom: 2rem;
   @include responsive(tab-land) {
     font-size: 2.8rem;
   }
+}
+.h3 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--medium-blue);
 }
 
 .h4 {
