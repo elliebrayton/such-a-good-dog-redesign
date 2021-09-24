@@ -67,7 +67,9 @@ body {
 }
 
 P {
-  padding-bottom: 2rem;
+  &:not(:last-child) {
+    padding-bottom: 2rem;
+  }
 }
 
 .header {
@@ -170,8 +172,8 @@ ul {
 }
 
 .section {
-  margin: 3rem 0;
-  padding: 4rem 0;
+  margin: 4rem 0;
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -265,5 +267,33 @@ li {
   &:visited {
     color: white;
     text-decoration: none;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.abt-img {
+  @include responsive(tab-port) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.trainer-profile {
+  margin: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.5px var(--dark-grey) solid;
+}
+.shape {
+  margin: 0 auto;
+  img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 25rem;
+    height: 25rem;
   }
 }
