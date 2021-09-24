@@ -1,0 +1,24 @@
+.primary-button {
+  display: inline-block;
+  background: var(--light-green);
+  text-decoration: none;
+  width: 23rem;
+  padding: 1rem 0 0.5rem;
+  border-bottom: var(--dark-green) 6px solid;
+  border-radius: 3px;
+  transition: 0.2s;
+  &:link,
+  &:visited {
+    font-family: var(--font-family);
+    color: white;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
+    }
+    &:active {
+      transform: scale(1.02) translateY(1px);
+    }
+  }
+}

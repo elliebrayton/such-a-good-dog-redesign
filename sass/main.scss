@@ -11,48 +11,15 @@ $container-max-widths: (
   xl: 1300px,
 ) !default;
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == xs-phone {
-    @media (min-width: 25.75em) {
-      @content;
-    } //412
-  }
-
-  @if $breakpoint == sm-phone {
-    @media (min-width: 33.68em) {
-      @content;
-    } //539
-  }
-
-  @if $breakpoint == tab-port {
-    @media (min-width: 45.5em) {
-      @content;
-    } //728px
-  }
-
-  @if $breakpoint == tab-land {
-    @media (min-width: 56.25em) {
-      @content;
-    } //900px
-  }
-
-  @if $breakpoint == desktop {
-    @media (min-width: 63.81em) {
-      @content;
-    } //1021px
-  }
-
-  @if $breakpoint == lg-desktop {
-    @media (min-width: 75em) {
-      @content;
-    } //1200px
-  }
-  @if $breakpoint == xl-desktop {
-    @media (min-width: 87.5em) {
-      @content;
-    } //1300px
-  }
-}
+@import '../bootstrap-4-grid/scss/grid.scss';
+@import 'abstracts/mixins';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'components/buttons';
+// @import 'layout/header';
+@import 'layout/footer';
+// @import 'pages/home';
+// @import 'pages/about';
 
 :root {
   --light-green: #9dc41c;
@@ -76,19 +43,8 @@ $container-max-widths: (
 }
 
 html {
-  font-size: 50%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-
-  @include responsive(sm-phone) {
-    font-size: 56.25%;
-  }
-  @include responsive(tab-land) {
-    font-size: 62.5%;
-  }
-  @include responsive(lg-desktop) {
-    font-size: 68.75%;
-  }
 }
 
 .container {
@@ -117,29 +73,18 @@ P {
   width: 300px;
 }
 
-.bg-accent {
-  background: var(--light-grey);
-  padding: 2.5rem;
-}
-
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 figure {
   width: 75%;
   margin: 0 auto;
-  @include responsive(tab-port) {
-    margin: 0;
-  }
 }
 
-.box-shadow {
-  box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
-}
-
-.text-wrap {
-  min-height: 30rem;
+.full-width {
+  display: block;
+  width: 100% !important;
 }
 
 .featured-container {
@@ -245,31 +190,6 @@ figure {
   }
 }
 
-.primary-button {
-  display: inline-block;
-  background: var(--light-green);
-  text-decoration: none;
-  width: 23rem;
-  padding: 1rem 0 0.5rem;
-  border-bottom: var(--dark-green) 6px solid;
-  border-radius: 3px;
-  transition: 0.2s;
-  &:link,
-  &:visited {
-    font-family: var(--font-family);
-    color: white;
-    text-align: center;
-
-    &:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
-    }
-    &:active {
-      transform: scale(1.02) translateY(1px);
-    }
-  }
-}
-
 .h1 {
   font-size: 2.4rem;
   font-weight: 600;
@@ -291,4 +211,26 @@ figure {
   }
 }
 
-@import '../bootstrap-4-grid/scss/grid.scss';
+.h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.sm-text {
+  font-size: 1.3rem;
+}
+
+.big-text {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
