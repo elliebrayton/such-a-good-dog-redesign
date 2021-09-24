@@ -2884,6 +2884,13 @@ body {
     .primary-button:link:active, .primary-button:visited:active {
       transform: scale(1.02) translateY(1px); }
 
+.card {
+  background: var(--light-grey);
+  padding: 3rem 2.5rem;
+  border-radius: 5px; }
+  .card:not(:last-child) {
+    margin-bottom: 5rem; }
+
 .footer-content {
   background: var(--dark-blue);
   color: var(--light-grey);
@@ -2980,6 +2987,9 @@ img {
 figure {
   margin: 0 auto; }
 
+main {
+  padding: 5rem 0 2rem; }
+
 .featured-container {
   padding: 2rem 0;
   justify-content: center; }
@@ -3020,6 +3030,11 @@ figure {
       width: 8rem; }
     .featured-container .featured-group p {
       align-self: baseline; }
+
+ul li {
+  padding-right: 3rem; }
+  ul li span {
+    font-weight: 600; }
 
 .accredition-img {
   text-align: center; }
@@ -3114,3 +3129,16 @@ ul {
 
 li {
   list-style: none; }
+
+.btn-long {
+  background: var(--medium-blue);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  width: 220px;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 3px; }
+  .btn-long:link, .btn-long:visited {
+    color: white;
+    text-decoration: none; }

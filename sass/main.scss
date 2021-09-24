@@ -18,10 +18,12 @@ $grid-gutter-width: 5rem !default;
 @import 'base/typography';
 @import 'base/utilities';
 @import 'components/buttons';
+@import 'components/card';
 // @import 'layout/header';
 @import 'layout/footer';
 // @import 'pages/home';
 // @import 'pages/about';
+@import 'pages/classes';
 
 :root {
   --light-green: #9dc41c;
@@ -83,7 +85,9 @@ img {
 figure {
   margin: 0 auto;
 }
-
+main {
+  padding: 5rem 0 2rem;
+}
 .featured-container {
   padding: 2rem 0;
   justify-content: center;
@@ -126,6 +130,15 @@ figure {
     }
     p {
       align-self: baseline;
+    }
+  }
+}
+
+ul {
+  li {
+    padding-right: 3rem;
+    span {
+      font-weight: 600;
     }
   }
 }
@@ -237,4 +250,20 @@ ul {
 
 li {
   list-style: none;
+}
+
+.btn-long {
+  background: var(--medium-blue);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  width: 220px;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 3px;
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
 }
