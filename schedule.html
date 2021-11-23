@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.typekit.net/pvp5coe.css">
     <link rel="stylesheet" href="css/main.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f93bc5f3ea.js" crossorigin="anonymous"></script>
     <title>Such A Good Dog</title>
   </head>
-  <body>
+  <body class="site">
     <!--START HEADER-->
     <header class="header">
         <div class="container">
@@ -41,7 +43,236 @@
     <!--START MAIN-->
     <main class="main">
         <div class="container">
-            <h1 class="h1">Schedule</h1>
+            <h1 class="h1">Class Schedule</h1>
+            <div class="schedule-dropdown">
+              <p class="pb-1"><span class="filter">Filter Classes:</span> <button onclick="myFunction()" class="select-class-btn">Select Class <i class="fas fa-angle-down"></i></button></p>
+              <ul id="selectClass" class="dropdown-content">
+                <li class="selected filter" data-filter="all">All</li>
+                <li class="filter" data-filter=".puppy">Puppy Gymboree</li>
+                <li class="filter" data-filter=".kindergarten">Kindergarten</li>
+                <li class="filter" data-filter=".elementary">Elementary</li>
+                <li class="filter" data-filter=".jrhigh">Jr. High</li>
+                <li class="filter" data-filter=".hihgschool">High School</li>
+                <li class="filter" data-filter=".fieldtrips">Field Trips</li>
+                <li class="filter" data-filter=".fasttrack">Fast Start</li>
+                <li class="filter" data-filter=".cgc">CGC Prep</li>
+                <li class="filter" data-filter=".seminars">Training Seminars</li>
+              </ul>
+              </div>
+              <section>
+                <p><span class="important">PROOF OF VACCINATION IS REQUIRED FOR ALL CLASSES<span></span></p>
+                <p>This is a list of the available classes. Refunds are not available within 48 hours of class start.  Proof of vaccination (Distemper/Parvo for all ages, Bordatella (kennel cough) and rabies over 14-16 weeks) by a veterinarian is required to attend class.  Titers test is also accepted. </p>
+              </section>
+              <section id="schedule-list" class="container-fluid p-0 m-0">
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix puppy schedule-page-bg mt-5 mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3 pb-md-0">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Puppy Gymboree</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Wed. Sept. 15th / 7:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>Single Session</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 1</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix puppy schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Puppy Gymboree</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Thurs. Sept. 18th / 6:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>Single Session</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 2</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix kindergarten schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Kindergarten</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Wed. Sept. 15th / 5:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>5 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 1</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix kindergarten schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Kindergarten</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Mon. Sept. 13th / 7:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>5 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 3</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix elementary schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Elementary</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Mon. Sept. 13th / 4:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>5 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 2</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix jrhigh schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Jr.High</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Wed. Sept. 22nd / 7:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>3 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 1</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix jrhigh schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Jr.High</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Sat Sept. 25th / 1:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>3 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 2</p>
+                  </div>
+                  <div class="col-12 col-md-2 align-self-center">
+                    <a href="#" class="register-btn">Register</a>
+                  </div>
+                </div>
+                <!-- END CLASS DETAILS -->
+                <!-- START CLASS DETAILS -->
+                <div class="row align-items-md-center no-gutters mix fasttrack schedule-page-bg mb-6 mb-md-0">
+                  <div class="col-5 col-md-3 pb-3">
+                    <h3 class="schedule-details-heading">Class Name</h3>
+                    <p>Fast Track Group A</p>
+                  </div>
+                  <div class="col-7 col-md-3">
+                    <h3 class="schedule-details-heading">Start Date / Time</h3>
+                    <p>Mon Sept. 20th / 5:00PM</p>
+                  </div>
+                  <div class="col-5 col-md-2">
+                    <h3 class="schedule-details-heading">Duration</h3>
+                    <p>2 1/2 Weeks</p>
+                  </div>
+                  <div class="col-7 col-md-2">
+                    <h3 class="schedule-details-heading">Trainer</h3>
+                    <p>Trainer 2</p>
+                  </div>
+                  <div class="col-12">
+                    <div class="row no-gutters d-flex flex-column-reverse flex-md-column">
+                      <div class="col-12 offset-md-10 col-md-2 align-self-center">
+                        <a href="#" class="register-btn">Register</a>
+                      </div>
+                      <div class="col-12">
+                        <div class="row no-gutters">
+                          <div class="offset-md-3"></div>
+                          <div class="col-12 col-md-9"><p class="pb-1">Meeting Times:</p>
+                            <div class="row">
+                              <div class="col-6 col-md-4">Mon Sept. 20th / 5:00PM</div>
+                              <div class="col-6 col-md-4">Wed Sept. 22nd / 6:00PM</div>
+                              <div class="col-6 col-md-4">Sat Sept. 25th / 3:00PM</div>
+                              <div class="col-6 col-md-4">Mon Sept/ 27th / 5:00PM</div>
+                              <div class="col-6 col-md-4">Wed Sept. 29th / 7:00PM</div>
+                            </div>
+    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!-- END CLASS DETAILS -->
+              </section>
+              <a href="#" class="primary-button d-block mx-auto my-7">Questions? Contact Us</a>
+            </div>
+            </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -82,5 +313,7 @@
         </div>
     </footer>
     <!--END MAIN-->
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

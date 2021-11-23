@@ -13,6 +13,38 @@ $container-max-widths: (
 
 $grid-gutter-width: 5rem !default;
 
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+    6: (
+      $spacer * 4,
+    ),
+    7: (
+      $spacer * 4.5,
+    ),
+    8: (
+      $spacer * 5,
+    ),
+  ),
+  $spacers
+);
+
 @import '../bootstrap-4-grid/scss/grid.scss';
 @import 'abstracts/mixins';
 @import 'base/typography';
@@ -61,9 +93,19 @@ html {
 }
 body {
   font-family: var(--font-family);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--dark-grey);
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
 }
 
 P {
@@ -136,15 +178,6 @@ main {
   }
 }
 
-ul {
-  li {
-    padding-right: 3rem;
-    span {
-      font-weight: 600;
-    }
-  }
-}
-
 .accredition-img {
   text-align: center;
 }
@@ -172,8 +205,8 @@ ul {
 }
 
 .section {
-  margin: 4rem 0;
-  padding: 2rem 0;
+  margin: 3.5rem 0;
+  padding: 2.5rem 0;
   position: relative;
 }
 
@@ -267,6 +300,14 @@ li {
   &:visited {
     color: white;
     text-decoration: none;
+
+    &:hover {
+      background: var(--light-blue);
+      transform: translateY(-1.5px);
+    }
+    &:active {
+      transform: translateY(0.75px);
+    }
   }
 }
 
@@ -296,4 +337,143 @@ li {
     width: 25rem;
     height: 25rem;
   }
+}
+
+.class-info {
+  padding-bottom: 2rem;
+}
+
+.class-details {
+  padding-bottom: 0.75rem;
+  li {
+    margin: 0 10px 0 0;
+  }
+}
+
+.select-class-btn {
+  display: inline-block;
+  background: none;
+  outline: none;
+  border: 0;
+  color: var(--dark-blue);
+  font-weight: 800;
+  font-family: inherit; /* 1 */
+  font-size: 1.6rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  &:hover {
+    cursor: pointer;
+    color: var(--medium-blue) !important;
+  }
+  @include responsive(tab-port) {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+}
+
+.schedule-dropdown {
+  display: inline-block;
+  position: relative;
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 2rem;
+  @include responsive(tab-port) {
+    font-size: 1.6rem;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -30px;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--light-grey);
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  z-index: 2;
+  li {
+    &:hover {
+      color: var(--medium-blue);
+      cursor: pointer;
+    }
+    &:active {
+      color: var(--dark-green);
+    }
+  }
+  @include responsive(tab-port) {
+    font-size: 1.1rem;
+    right: -20px;
+  }
+}
+
+.show {
+  display: block;
+}
+
+#schedule-list {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.schedule-page-bg {
+  background: var(--light-grey);
+  padding: 2rem;
+  font-size: 1.4rem;
+  @include responsive(tab-port) {
+    background: transparent;
+    &:not(:last-child) {
+      border-bottom: var(--light-grey) solid 2px;
+    }
+  }
+}
+
+.register-btn {
+  background: var(--medium-blue);
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.6rem 0 0.5rem;
+  width: 25rem;
+  margin: 2rem auto 0;
+  display: block;
+  border-radius: 3px;
+
+  @include responsive(tab-port) {
+    width: 11.5rem;
+    font-size: 1.1rem;
+    padding: 0.3rem 0 0.2rem;
+    margin: 0 auto;
+  }
+  @include responsive(tab-land) {
+    width: 13rem;
+  }
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--light-blue);
+      transform: translateY(-1.5px);
+    }
+    &:active {
+      transform: translateY(0.75px);
+    }
+  }
+}
+
+.important {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: var(--light-blue);
 }
