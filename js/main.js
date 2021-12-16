@@ -1,27 +1,10 @@
-var categoryfilter = document.querySelector('#schedule-list');
-var mixer = mixitup(categoryfilter, {
-  animation: {
-    effects: 'fade translateY(50px)',
-  },
-});
+var bars = document.getElementById('hamburger');
+var cross = document.getElementById('cross');
+var navigation = document.getElementById('mobile-navigation');
 
-$('.dropdown-content li').click(function () {
-  $(this).addClass('selected').siblings().removeClass('selected');
-});
-
-function myFunction() {
-  document.getElementById('selectClass').classList.toggle('show');
-}
-
-window.onclick = function (event) {
-  if (!event.target.matches('.select-class-btn')) {
-    var dropdowns = document.getElementsByClassName('dropdown-content');
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+var openCloseNav = function openCloseNav() {
+  navigation.classList.toggle('expand');
+  bars.classList.toggle('active');
 };
+
+bars.addEventListener('click', openCloseNav);

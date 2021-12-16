@@ -4,9 +4,13 @@
   text-decoration: none;
   width: 23rem;
   padding: 1rem 0 0.5rem;
+  border: none;
   border-bottom: var(--dark-green) 6px solid;
   border-radius: 3px;
   transition: 0.2s;
+  font-family: var(--font-family);
+  color: white;
+
   &:link,
   &:visited {
     font-family: var(--font-family);
@@ -20,5 +24,16 @@
     &:active {
       transform: scale(1.02) translateY(1px);
     }
+  }
+}
+
+form button {
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 5px 20px rgba(108, 116, 111, 0.397);
+  }
+  &:active {
+    transform: scale(1.02) translateY(1px);
   }
 }

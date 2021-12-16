@@ -1,16 +1,21 @@
 .footer-content {
-  background: var(--dark-blue);
+  background: var(--medium-blue);
   color: var(--light-grey);
   padding: 4rem 0 5rem;
   text-align: left;
+  font-size: 1.4rem;
 
   .h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
     &::after {
       content: '';
       display: block;
       width: 105%;
       height: 1px;
-      margin-top: 2px;
+      margin-top: -1px;
       background: var(--light-blue);
     }
   }
@@ -34,13 +39,26 @@
         padding-bottom: 2rem;
         & > * {
           &:not(:last-child) {
-            padding-right: 2rem;
+            padding-right: 15rem;
           }
         }
         //   display: flex;
+        @include responsive(sm-phone) {
+          & > * {
+            &:not(:last-child) {
+              padding-right: 10rem;
+            }
+          }
+        }
         @include responsive(tab-port) {
           text-align: left;
           padding-bottom: 2rem;
+
+          & > * {
+            &:not(:last-child) {
+              padding-right: 6rem;
+            }
+          }
         }
         a:link,
         a:visited {

@@ -11,25 +11,49 @@
   <body>
     <!--START HEADER-->
     <header class="header">
-        <div class="container">
-            <nav class="desktop-navigation d-flex">
+        <div class="container d-flex justify-content-between">
                 <div class="logo">
-                  <img src="img/logo.svg" alt="such-a-good-dog-logo" />
+                    <a href="index.html"><img src="img/logo.svg" alt="such-a-good-dog-logo" /></a>
                 </div>
-                <ul class="d-flex">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li>
-                    <a href="#">Training</a>
-                    <!-- <ul>
-                      <li><a href="#">Classes</a></li>
-                      <li><a href="#">Schedule</a></li>
-                    </ul> -->
-                  </li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Register for Class</a></li>
-                </ul>
-              </nav>
+                <div class="hamburger" id="hamburger">
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </div>
+                <nav id="mobile-navigation">
+                    <ul class="mobile-nav-menu">
+                        <li class="nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item">
+                          <a href="#">Training</a>
+                          <ul>
+                            <li class="nav-item"><a href="classes.html">Classes</a></li>
+                            <li class="nav-item"><a href="private-training.html">Private Training</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        <li class="nav-item underline"><a href="schedule.html">Register for Class</a></li>
+    
+                    </ul>
+                </nav>
+                <nav class="desktop-navigation align-self-center">
+                    <ul class="desktop-nav-menu">
+                        <li class="nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item">
+                        <div class="dropdown-nav">
+                          <a href="classes.html">Training</a>
+                          <ul class="sub-menu">
+                            <li class="sub-menu-item"><a href="classes.html">Classes</a></li>
+                            <li class="sub-menu-item"><a href="private-training.html">Private Training</a></li>
+                          </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        <li class="cta"><a href="schedule.html">Register for Class</a></li>
+    
+                    </ul>
+                </nav>
         </div>
     </header>
     <div class="alert text-center">
@@ -47,7 +71,7 @@
                         <div class="jumbotron">
                             <h1 class="h1 text-light">Canine Training & Obedience</h1>
                             <p class="pb-5">Our training focuses on positive reinforcement and clear communication. We offer a variety of small group classes in order to give our clients individualized attention. Classes can fill up quickly, so register and secure your spot!</p>
-                            <a href="#" class="primary-button">View Our Classes</a>
+                            <a href="classes.html" class="primary-button">View Our Classes</a>
                         </div>
                     </div>
                     <div class="mt-5 col-md-5 align-self-end">
@@ -84,7 +108,7 @@
                     <p>Canine Good Citizen prep and testing</p>
                 </div>
             </div>
-            <a href="#" class="primary-button align-self-center">Schedule of Classes</a>
+            <a href="schedule.html" class="primary-button align-self-center">Schedule of Classes</a>
         </section>
         <section class="section">
             <div class="container">
@@ -95,11 +119,9 @@
                         </figure>
                     </div>
                     <div class="col-md-6 align-self-center d-flex flex-column">
-                        <div class=text-wrap>
                             <h2 class="h2">Our Training Philopsophy</h2>
                             <p>Our training philosophy is based on the fact that dogs will respond to positive, rewarding situations and clear communication.  We specialize in helping you learn to read your dog’s body language so you can better communicate with them, and with small class sizes you’ll get all the attention you need.</p>
-                        </div>
-                        <a href="#" class="primary-button align-self-center align-self-md-start">About Us</a>
+                        <a href="about.html" class="primary-button align-self-center align-self-md-start">About Us</a>
                     </div>
                 </div>
             </div>
@@ -127,16 +149,16 @@
                 <div class="footer-nav-wrapper d-flex flex-column">
                     <h4 class="h4">Navigation</h4>
                     <div class="footer-nav d-flex flex-row">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <ul">
-                        <li><a href="#">Classes</a></li>
-                        <li><a href="#">Schedule</a></li>
-                        <li><a href="#">Private Training</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="classes.html">Classes</a></li>
+                            <li><a href="schedule.html">Schedule</a></li>
+                            <li><a href="private-training.html">Private Training</a></li>
+                        </ul>
                 </div>
                 </div>
                 <div class="footer-contact">
@@ -157,5 +179,6 @@
         </div>
     </footer>
     <!--END MAIN-->
+    <script src="js/main.js"></script>
   </body>
 </html>

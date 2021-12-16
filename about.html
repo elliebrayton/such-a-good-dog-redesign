@@ -11,25 +11,49 @@
   <body>
     <!--START HEADER-->
     <header class="header">
-        <div class="container">
-            <nav class="desktop-navigation d-flex">
+        <div class="container d-flex justify-content-between">
                 <div class="logo">
-                  <img src="img/logo.svg" alt="such-a-good-dog-logo" />
+                    <a href="index.html"><img src="img/logo.svg" alt="such-a-good-dog-logo" /></a>
                 </div>
-                <ul class="d-flex">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li>
-                    <a href="#">Training</a>
-                    <!-- <ul>
-                      <li><a href="#">Classes</a></li>
-                      <li><a href="#">Schedule</a></li>
-                    </ul> -->
-                  </li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Register for Class</a></li>
-                </ul>
-              </nav>
+                <div class="hamburger" id="hamburger">
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </div>
+                <nav id="mobile-navigation">
+                    <ul class="mobile-nav-menu">
+                        <li class="nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item">
+                          <a href="#">Training</a>
+                          <ul>
+                            <li class="nav-item"><a href="classes.html">Classes</a></li>
+                            <li class="nav-item"><a href="private-training.html">Private Training</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        <li class="nav-item underline"><a href="schedule.html">Register for Class</a></li>
+    
+                    </ul>
+                </nav>
+                <nav class="desktop-navigation align-self-center">
+                    <ul class="desktop-nav-menu">
+                        <li class="nav-item"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item">
+                        <div class="dropdown-nav">
+                          <a href="classes.html">Training</a>
+                          <ul class="sub-menu">
+                            <li class="sub-menu-item"><a href="classes.html">Classes</a></li>
+                            <li class="sub-menu-item"><a href="private-training.html">Private Training</a></li>
+                          </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        <li class="cta"><a href="schedule.html">Register for Class</a></li>
+    
+                    </ul>
+                </nav>
         </div>
     </header>
     <div class="alert text-center">
@@ -43,7 +67,7 @@
         <div class="container">
             <h1 class="h1">About Us</h1>
         </div>
-        <section class="section bg-accent py-5">
+        <section class="section bg-accent py-5 my-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
@@ -62,15 +86,15 @@
             <div class="container">
                 <h2 class="h2">Our Trainers</h2>
                 <div class="row">
-                    <div class="col-md-4 col-lg-3 align-self-center">
+                    <div class="col-md-3 col-lg-3 align-self-center">
                         <figure class="shape">
                             <img src="img/trainer-placeholder-img-01.png" alt="trainer-placeholder-img">
                         </figure>
                     </div>
                     <div class="col-md-8 col-lg-9 align-self-center">
                         <div class="trainer-profile">
-                            <h3 class="h3">Laurel Rose</h3>
-                            <p>Laurel has been working with dogs and their owners professionally since 2001. She is also a Certified Mentor Trainer to Animal Behavior College Students and an AKC Canine Good Citizen Instructor/Evaluator. Her interest in training began as a puppy raiser and volunteer coordinator for Canine Companions for Independence.  She’s a published author of training articles on examiner.com and has been the “Ask the Expert” on WAAY TV.  Laurel is also the Founder and President of Huntsville Got Your Six a registered 501(c)3 organization providing no cost PTSD service dog training for veterans and their dogs.​</p>
+                            <h3 class="h3">Trainer 1</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque delectus praesentium, magni laborum maxime facere. Asperiores reiciendis natus, accusantium minima nihil saepe debitis, hic perferendis quo impedit quidem repellendus et veniam est quasi nemo officiis reprehenderit aspernatur ex laborum dolorem deserunt. Temporibus quo voluptas eos? Esse numquam, voluptas facere error laborum a qui odit cupiditate praesentium repellendus. Sunt quam, incidunt numquam, cumque, in exercitationem veniam iusto ipsum ipsam provident cupiditate. Sunt recusandae sit sint quaerat!​</p>
                             <p><b>Certifications: </b>CPDT-KA</p>
                         </div>
                     </div>
@@ -83,8 +107,8 @@
                     </div>
                     <div class="col-md-9 align-self-center">
                         <div class="trainer-profile">
-                            <h3 class="h3">Jennie Hudson</h3>
-                            <p>She has been a professional trainer since 2016 and is a professionally certified trainer through the Certification Council of Professional Dog Trainers.  Jennie has been heavily involved in Therapy Dog work within a local organization,  and with her own dog has been a Therapy Dog team since 2014.  She’s been working with rescue dogs since 2008 and is on the Advisory Board of Huntsville Animal Services, currently as President, and on their Foundation, 501(c)3 fundraising organization.  She is also on the Board for SNAP (Spay Neuter Action Project).  Jennie is a Certified Pet Partners Team evaluator. ​</p>
+                            <h3 class="h3">Trainer 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, expedita optio non dolores placeat necessitatibus velit veritatis iste. Nobis iusto dolor vero non delectus praesentium? Ipsa nemo nisi culpa quia animi vel error accusantium sit quidem? Autem amet distinctio doloremque quas reiciendis iste rerum dolore totam necessitatibus dolor exercitationem quod, explicabo laudantium, voluptas assumenda sint doloribus vitae facilis perspiciatis molestias itaque repudiandae illum. Aliquam, obcaecati unde vitae sed odio alias neque aspernatur quam praesentium quos inventore magnam nihil atque amet maxime fugit ex aperiam ducimus architecto esse consequatur veniam excepturi ut. Odit tenetur magni distinctio vero. Corrupti natus est qui quis, explicabo ut iure! Veniam culpa mollitia excepturi totam deserunt quaerat nulla a similique, quo reprehenderit, impedit ad natus?</p>
                             <p><b>Certifications: </b>CPDT-KA</p>
                         </div>
                     </div>
@@ -97,8 +121,8 @@
                     </div>
                     <div class="col-md-9 align-self-center">
                         <div class="trainer-profile">
-                            <h3 class="h3">Gary Hudson</h3>
-                            <p>He graduated with honors from the Animal Behavior College as an educationally certified dog obedience instructor and is also professionally certified through the Certification Council of Professional Dog Trainers. He has been involved with rescue for 10 years as a foster, volunteer, and evaluator. Gary lives with 3 Australian Shepherds</p>
+                            <h3 class="h3">Trainer 3</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestiae magni, modi repellat libero veniam inventore accusamus nostrum iste, magnam culpa deleniti optio id amet consectetur, cumque distinctio dolorum eligendi!</p>
                             <p><b>Certifications: </b>ABCDT, CPDT-KA</p>
                         </div>
                     </div>
@@ -114,16 +138,16 @@
                 <div class="footer-nav-wrapper d-flex flex-column">
                     <h4 class="h4">Navigation</h4>
                     <div class="footer-nav d-flex flex-row">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Classes</a></li>
-                        <li><a href="#">Schedule</a></li>
-                        <li><a href="#">Private Training</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="classes.html">Classes</a></li>
+                            <li><a href="schedule.html">Schedule</a></li>
+                            <li><a href="private-training.html">Private Training</a></li>
+                        </ul>
                 </div>
                 </div>
                 <div class="footer-contact">
@@ -144,5 +168,6 @@
         </div>
     </footer>
     <!--END MAIN-->
+    <script src="js/main.js"></script>
   </body>
 </html>
